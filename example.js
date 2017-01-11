@@ -1,3 +1,4 @@
-import { takeEvery, takeLatest } from 'redux-saga'
-import R from 'ramda'
-import { fork } from 'redux-saga/effects'
+import { takeEvery, takeLatest } from 'should-be-fourth'
+import activate from 'should-be-first'
+import * as something from 'should-be-third'
+import { fork } from 'should-be-second'

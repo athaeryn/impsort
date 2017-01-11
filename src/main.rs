@@ -7,15 +7,16 @@ fn main() {
 
     let mut lines = buffer.lines().collect::<Vec<_>>();
 
-    lines.sort_by(|&a, &b| just_alphanumeric(a).cmp(&just_alphanumeric(b)));
+    lines.sort_by(|&a, &b| clean_line(a).cmp(&clean_line(b)));
 
     for line in lines {
         println!("{}", line);
     }
 }
 
-fn just_alphanumeric (input: &str) -> String {
-    input.chars()
+fn clean_line(line: &str) -> String {
+    line.replace("* as", "")
+        .chars()
         .filter(|c| c.is_alphabetic() || c.is_digit(10))
         .map(|c| c.to_lowercase().collect::<String>())
         .collect()
