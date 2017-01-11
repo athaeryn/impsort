@@ -5,8 +5,9 @@ _impsort sorts your ES6 imports_
 
 ---
 
-`impsort` sorts imports by stripping out the noise like `import` and curly
-braces. It also treats `import * as actions` as `import actions`.
+`impsort` sorts imports by stripping out noise like `import` and curly braces.
+It also treats `import * as actions` as `import actions` so that sorting
+operates on the actual identifier being imported.
 
 ## Example
 
