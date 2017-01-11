@@ -1,4 +1,4 @@
-impsort
+impsort 😈
 =======
 
 _impsort sorts your ES6 imports_
